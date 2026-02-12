@@ -1,5 +1,15 @@
 {
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/vercel_sheets/api/webhook.py" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "vercel_sheets/api/webhook.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "vercel_sheets/api/webhook.py"
+    }
   ]
 }
