@@ -250,6 +250,8 @@ def health():
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
+app = app # เพิ่มบรรทัดนี้
+
 # สำหรับ Local testing
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
