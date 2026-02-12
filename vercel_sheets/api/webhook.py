@@ -253,3 +253,6 @@ def health():
 # สำหรับ Local testing
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
+# เพิ่มบรรทัดนี้ไว้ล่างสุดของไฟล์ เพื่อให้ Vercel เรียกใช้ได้
+app = app
